@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+* { box-sizing: border-box; }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Arial", sans-serif;
+  background-color: #fdfdfd;
+}
+
+
+/*base movil*/
+header {
+  background-color: #d6a2ac;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;/*logo arriba, menu abajo*/
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+}
+header .logo img {
+  height: 80px; /*logo mas pequeño*/
+  width: auto;
+}
+head nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+ 
+}
+header nav a {
+  margin-right: 5px;
+  text-decoration: none;
+  color: #8d6e63;
+  font-weight: bold;
+  font-size: 14px;
+ 
+}
+header nav a:hover {
+  color: #fce4ec;
+  }
+
+/* --- 2. DESKTOP (Pantallas medianas y grandes) --- */
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row; /* En PC: Logo a la izquierda, Menú a la derecha */
+    justify-content: space-between;
+    padding: 1rem 5%;
+  }
+
+  header .logo img {
+    height: 200px; /* Logo un poco más grande en PC */
+  }
+
+  header nav a {
+    font-size: 16px;
+  }
+}
+.galeria img,.contenedor-padre2 img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 250px;
+}
+
+/* Galería - diseño base (móvil) */
+.galeria,.contenedor-padre2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.galeria img,.contenedor-padre2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Media Query 1: Tablets, serian anchos≥ 600px) */
+@media (min-width: 600px) {
+  .galeria, .contenedor-padre2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Media Query 2: Escritorio, serian anchos ≥ 1024px */
+@media (min-width: 1024px) {
+  .galeria {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .galeria img,.contenedor-padre2 img{
+    transition: transform 0.3s ease;
+  }
+  .galeria img:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedor-padre2 {
+    display: grid;
+    /* Crea 4 columnas*/
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    max-width: 1200px; /* Limita el ancho total del grupo de tarjetas */
+    margin: 0 auto;    /* Centra el bloque entero de 4 columnas */
+    justify-items: center; /* Centra cada tarjeta dentro de su espacio de columna */
+  }
+}
+
+/*estilo del contenedor de producto*/
+  
+.contenedor-padre2 {
+  display: grid;
+  grid-template-columns: repeat(1 1fr);
+
+  margin-bottom:20px;
+  
+}
+
+    .card2 {
+    display: flex;
+    flex-direction: column; /* El contenido interno (título, precio) va uno sobre otro */
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;    
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+    margin-bottom:10px;
+
+    width: 100%;
+    max-width: 300px; /* Esto evita que ocupe toda la pantalla */
+    margin: 0 auto;
+    }
+    
+
+    .contenedor-padre2 img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px; 
+    }
+   
+
+.text-center{
+  flex: 1 1 auto; 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.text-primary{
+  margin-top: auto; 
+}
+
+/*boton*/
+.btn-secondary{
+  text-decoration: none;
+  margin-top: auto; 
+  padding: 10px;
+  background-color:  #8d6e63;
+  color: white;
+  border-radius: 8px;
+  display: block;
+
+}
+ 
+
+/**estilo del footer*/
+footer {
+  background-color: #d6a2ac;
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 20px;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.social-icons {
+  display: flex;
+  width: 20px; /* Ancho deseado */
+  color: white;
+}
+
+
+
+.email {
+  color: white;
+}
+.numerocelular {
+  color: white;
+}
+
+.defensadelconsumidor {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  display: flex; /* Flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center;
+  gap: 2rem; /* Espacio entre icono y texto */
+  color: white;
+}
+
+
+.mapa{
+ 
+  width: 100%; 
+  margin-top: 30px;
+  padding: 0;
+  display: block;
+   
+}
+.mapa iframe{
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 15px;
+
+}
+@media screen and (min-width:1024px){
+  .mapa iframe{
+    height: 450px;
+  }
+}
+
+/* Contenedor principal contacto y pedidos*/
+#pedidos {
+    padding: 60px 0;
+    background-color: #fdf8f5; /* Un tono crema suave */
+}
+
+/* Título de la sección */
+#pedidos h2 {
+    color: #6d4c41; /* Marrón cálido */
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Estilo del formulario */
+#pedidos form {
+    border-top: 5px solid #d6a2ac; /* Detalle de color madera/lana */
+    transition: transform 0.3s ease;
+}
+
+#pedidos form:hover {
+    transform: translateY(-5px); /* Efecto sutil de elevación */
+}
+
+/* Etiquetas y campos */
+.form-label {
+    color: #5d4037;
+    font-weight: 600;
+}
+
+.form-control, .form-select {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #d6a2ac;
+    box-shadow: 0 0 0 0.25rem rgba(212, 163, 115, 0.25);
+    outline: none;
+}
+
+/* Botón de envío personalizado */
+.btn-primary {
+    background-color: #d6a2ac;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d6a2ac;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto de ayuda inferior */
+#emailHelp {
+    color: #8d6e63;
+    font-style: italic;
+}
+/**---sobre mi video tienda*/
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+}

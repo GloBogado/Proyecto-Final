@@ -39,11 +39,11 @@
                         <h2 class="text-center mb-4">Formulario de Pedido</h2>
                         <form action="#" method="POST" class="p-4 shadow rounded bg-light">
 
-                             
-                            <form action="https://formsubmit.co/gloria.bog@hotmail.com" method="POST">
+           <form action="https://formsubmit.co/gloria.bog@hotmail.com" method="POST">
              
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre completo</label>
+                    
                     <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ej: María García" required>
                 </div>
 
@@ -62,16 +62,19 @@
                     <textarea name="descripcion" class="form-control" id="descripcion" rows="4" required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary w-100">Enviar Solicitud de Tejido</button>
+                <!-- Campos ocultos útiles -->
                 <input type="hidden" name="_captcha" value="false">
-            </form>
-        </div>
-    </div>
-    <h2>Tambien podes realizar tu pedido por whatsapp</h2>
-    <p>¡Hola! Para brindarte una atención personalizada, por favor envíame tu nombre completo y una descripción (o foto) del tejido o amigurumi que deseas. Me pondré en contacto contigo a la brevedad para definir detalles.
-     <p>(+54)1154688944</p> 
-    <p>Argentina,buenos aires</p>
-  </section>
+                <input type="hidden" name="_subject" value="¡Nuevo pedido de tejido!">
+
+                <button type="submit" class="btn btn-primary w-100">Enviar Solicitud de Tejido</button>
+          </form>
+
+        
+        <h2>Tambien podes realizar tu pedido por whatsapp</h2>
+        <p>¡Hola! Para brindarte una atención personalizada, por favor envíame tu nombre completo y una descripción (o foto) del tejido o amigurumi que deseas. Me pondré en contacto contigo a la brevedad para definir detalles.
+        <p>(+54)1154688944</p> 
+        <p>Argentina,buenos aires</p>
+    </section>
 </main>
            
 
